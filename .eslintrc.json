@@ -1,0 +1,74 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["simple-import-sort"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": false,
+        "trailingComma": "es5"
+      }
+    ],
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/no-unused-prop-types": "off",
+    "react/require-default-props": "off",
+    "react/display-name": "warn",
+    "no-unused-vars": "off",
+    "sort-imports": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "lodash",
+        "message": "Please use `import foo from 'lodash/foo'` to avoid bringing the whole lodash module into the bundle"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "ts": "never", "tsx": "never" }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": ["**/test/**", "**/*.test.ts", "**/*.test.tsx"] }
+    ],
+    "react/jsx-props-no-spreading": [
+      "error",
+      { "html": "ignore", "exceptions": ["FormProvider"] }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "."
+      }
+    }
+  },
+  "globals": {
+    "React": "writable"
+  }
+}
