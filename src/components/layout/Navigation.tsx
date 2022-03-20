@@ -5,7 +5,6 @@ import {
   Image,
   Form,
   InputGroup,
-  Button,
 } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
 import styled from "styled-components";
@@ -34,7 +33,7 @@ function Navigation() {
               className="bg-transparent text-white border-0 border-bottom"
             />
             <SearchButton type="submit">
-              <BsSearch color="white" size={18}/>
+              <BsSearch color="white" size={18} />
             </SearchButton>
           </InputGroup>
         </Nav>
